@@ -13,6 +13,7 @@ export default class EsriService {
     intl.setLocale('en');
 
     const interceptor = {
+      urls: [/arcgis.com/, /arcgisonline.com/],
       before(params) {
         params.requestOptions.query = self._setDefaultParams(
           params.requestOptions.query ?? {}
