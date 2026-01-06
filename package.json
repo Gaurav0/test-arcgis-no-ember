@@ -4,9 +4,10 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack",
-    "postbuild": "cp -r node_modules/@arcgis/core/assets public",
+    "postbuild": "cp -r node_modules/@arcgis/core/assets public; cp -r node_modules/@arcgis/map-components/dist/cdn/assets public",
     "watch": "webpack --watch",
-    "serve": "webpack serve --open"
+    "serve": "webpack serve --open",
+    "preserve": "npm run postbuild"
   },
   "author": "",
   "license": "ISC",
